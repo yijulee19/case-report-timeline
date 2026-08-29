@@ -5,7 +5,7 @@ from plotly.subplots import make_subplots
 st.set_page_config(page_title="中醫骨傷科病例追蹤", layout="wide")
 st.title("病程與追蹤治療時序圖")
 
-# 建立頁籤 (對應你要求的第三頁、第四頁)
+# 建立頁籤
 tab1, tab2 = st.tabs(["治療介入前 (時序圖)", "追蹤治療 (介入後)"])
 
 # 共用的註解方塊樣式
@@ -13,7 +13,7 @@ yellow_anno = dict(showarrow=True, arrowhead=1, arrowcolor="gray", bordercolor="
 blue_anno = dict(showarrow=True, arrowhead=1, arrowcolor="gray", bordercolor="#6C8EBF", bgcolor="#DAE8FC", font=dict(size=11, color="black"))
 
 # ==========================================
-# 第三頁：治療介入前的時序圖 (更新 X 軸日期顯示)
+# 第一頁：治療介入前的時序圖 (更新 X 軸日期顯示)
 # ==========================================
 with tab1:
     st.subheader("治療介入前 - 病程時序與診斷")
@@ -81,7 +81,7 @@ with tab1:
     st.plotly_chart(fig1, use_container_width=True)
 
 # ==========================================
-# 第四頁：追蹤治療 (介入後) - 回復原本飄浮便利貼樣式
+# 第二頁：追蹤治療 (介入後)
 # ==========================================
 with tab2:
     st.subheader("治療介入後 - 追蹤與 NRS 分數變化")
