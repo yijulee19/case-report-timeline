@@ -151,8 +151,33 @@ with tab2:
         col=1,
     )
 
-    fig2.add_shape(type="rect", x0="2026-07-13", x1="2026-07-31", y0=1.2, y1=1.8, fillcolor="#D5E8D4", line={"color": "white"}, opacity=0.8, row=2, col=1)
-    fig2.add_annotation(x="2026-07-22", y=1.5, text="雷射針灸治療 (回診日施作)", showarrow=False, font={"size": 12, "color": "#274E13"}, row=2, col=1)
+    pulse_dates = ["2026-07-13", "2026-07-15", "2026-07-16", "2026-07-20", "2026-07-21", "2026-07-28", "2026-07-29", "2026-07-31"]
+    for date in pulse_dates:
+        fig2.add_shape(
+            type="rect",
+            x0=date,
+            x1=date,
+            y0=1.1,
+            y1=1.9,
+            fillcolor="#D5E8D4",
+            line={"color": "#6AA84F", "width": 20},
+            opacity=0.6,
+            row=2,
+            col=1,
+        )
+    fig2.add_annotation(
+        x="2026-07-12.8",
+        y=1.5,
+        text="雷射針灸治療<br>（回診日施作）",
+        showarrow=False,
+        font={"size": 13, "color": "#1F4E1F", "family": "Arial"},
+        bgcolor="#E2F0D9",
+        bordercolor="#6AA84F",
+        borderwidth=1.5,
+        xanchor="left",
+        row=2,
+        col=1,
+    )
 
     fig2.add_shape(type="rect", x0="2026-07-13", x1="2026-07-15", y0=0.2, y1=0.8, fillcolor="#DAE8FC", line={"color": "white"}, opacity=0.8, row=2, col=1)
     fig2.add_annotation(x="2026-07-14", y=0.5, text="冷熱交替浴 (每日)", showarrow=False, font={"size": 12, "color": "#103667"}, row=2, col=1)
